@@ -7,16 +7,24 @@ var fs = require("fs");
 //Set up express
 
 var app = express();
-var PORT = 3000;
+var PORT = (process.env.PORT || 3000)
 
 //Data Parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
 //HTML ROUTES
 // * GET `/notes` - Should return the `notes.html` file.
+app.get("/notes", function(req,res){
+    res.sendFile(path.join(__dirname, "public/notes.html"))
+});
 
 // * GET `*` - Should return the `index.html` file
+
+app.get("*", function(req, res){
+    res.sendFile(path.join(__dirname, "public/index.html"))
+});
 
 
 //API ROUTES 

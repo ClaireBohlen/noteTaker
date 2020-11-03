@@ -3,7 +3,11 @@
 
 **Github UserName: ClaireBohlen
 
-**Here is the link to my deployed application: I'm having some difficulty with the save and delete button and do not have a delopyed link at the moment. I rearranged some of the express syntax after doing some research and it has seemed to help a bit but the appliction is not 100% functional. I'm working on refractering my code and checking with any errors. I do not get any errors in the command line but when I console log in the browser, I see an error for the main.html file that was already written for us within the starter code. If you're a grader, can you please take a look at the code and provide any reccomendation. Thank you!
+**Here is the link to my deployed application:  If you're a grader, can you please take a look at the code and provide any reccomendations on my syntax for depolying to Heroku? I have tried all of the heroku tips but I'm still not able to deploy it. Thank you!
+
+Heroku APP REPO: https://git.heroku.com/note-taker-cb.git
+
+BROKEN DEPLOYED LINK: https://note-taker-cb.herokuapp.com/
 
 Table of Contents: 
 * [Description] (#description)

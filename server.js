@@ -13,23 +13,27 @@ const PORT = (process.env.PORT || 3000)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static('public'));
+app.use(express.static('Develop/public'));
 
 
 //Data Parsing
-let dbNotes = JSON.parse(fs.readFileSync("./develop/db/db.json", "utf8"))
+let dbNotes = JSON.parse(fs.readFileSync("./Develop/db/db.json", "utf8"))
+
+app.get("/", function(req, res) {
+    res.json(path.join(__dirname, "Develop/public/index.html"));
+  });
 
 
 //HTML ROUTES
 // * GET `/notes` - Should return the `notes.html` file.
 app.get("/notes", function(req,res){
-    res.sendFile(path.join(__dirname, "develop/public/notes.html"))
+    res.sendFile(path.join(__dirname, "Develop/public/notes.html"))
 });
 //API ROUTES 
 // * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
 
 app.get("/api/notes", function(req, res){
-    res.sendFile(path.join(__dirname, "/develop/db/db.json"));
+    res.sendFile(path.join(__dirname, "/Develop/db/db.json"));
 });
 
 app.get("/api/notes/:id", function(req, res){
@@ -39,7 +43,7 @@ app.get("/api/notes/:id", function(req, res){
 // * GET `*` - Should return the `index.html` file
 
 app.get("*", function(req, res){
-    res.sendFile(path.join(__dirname, "develop/public/index.html"))
+    res.sendFile(path.join(__dirname, "Develop/public/index.html"))
 });
 
 // * POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
@@ -48,9 +52,9 @@ app.post("/api/notes", function(req, res){
     var addNotes = req.body
     var uniqueID = (dbNotes.length).toString()
     addNotes.id = uniqueID
-    dbNotes.push(newNote)
+    dbNotes.push(addNotes)
 
-    fs.writeFileSync("./develop/db/db.json", JSON.stringify(dbNotes))
+    fs.writeFileSync("./Develop/db/db.json", JSON.stringify(dbNotes))
     res.json(dbNotes);
     
 })
@@ -68,7 +72,7 @@ app.delete("/api/notes/:id", function(req, res){
         res.json(dbNotes);
     }
 
-    fs.writeFileSync("./develop/db/db.json", JSON.stringify(dbNotes))
+    fs.writeFileSync("./Develop/db/db.json", JSON.stringify(dbNotes))
     res.json(dbNotes)
 });
 

@@ -1,13 +1,13 @@
 
-**Title: Express Note Taker
+##Title: Express Note Taker
 
-**Github UserName: ClaireBohlen
+##Github UserName: ClaireBohlen
 
-**Here is the link to my deployed application:  If you're a grader, can you please take a look at the code and provide any reccomendations on my syntax for depolying to Heroku? I have tried all of the heroku tips but I'm still not able to deploy it. Thank you!
+##Here is the link to my deployed application:  If you're a grader, can you please take a look at the code and provide any reccomendations on my syntax for depolying to Heroku? I have tried all of the heroku tips but I'm still not able to deploy it. Thank you!
 
 Heroku APP REPO: https://git.heroku.com/note-taker-cb.git
 
-BROKEN DEPLOYED LINK: https://note-taker-cb.herokuapp.com/
+DEPLOYED LINK: https://fathomless-springs-57799.herokuapp.com/
 
 Table of Contents: 
 * [Description] (#description)
@@ -18,16 +18,16 @@ Table of Contents:
 * [Contact](#contact)
 * 
 
-**Below is a description of my project: Using express and node js, I'm developing the back end portion of a note taking appliction.
+##Below is a description of my project: 
 
-**Instructions on usage: 
+Using express and node js, I'm developing the back end portion of a note taking appliction.
 
-**Here are the steps required to install your project; Clone down repo and npm install express.
 
-**How to contribute: Yes
+##Here are the steps required to install your project; Clone down repo and npm install express.
+
+
        
-**License Info: BSD
+##License Info: BSD
+
         
-**Here are some example tests I've run 
-        
-**You can contact me with any questions at clairebohlen@gmail.com
+##You can contact me with any questions at clairebohlen@gmail.com

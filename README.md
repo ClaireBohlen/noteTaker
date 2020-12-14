@@ -140,7 +140,7 @@ Claire C. Bohlen - clairebohlen@gmail.com
 
 
 [license-shield]: https://img.shields.io/badge/LICENSE-MIT-blueviolet
-[license-url]: (readMeAssets/LICENSE.txt)
+[license-url]: (./readMeAssets/LICENSE.txt)
 
 [linkedin-shield]: https://img.shields.io/badge/-LINKEDIN-blueviolet
 [linkedin-url]: https://www.linkedin.com/in/claire-bohlen-63a4b5119/
